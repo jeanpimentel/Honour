@@ -21,6 +21,8 @@
 		D98B8E491AF2B8B600105460 /* StartsWithTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E481AF2B8B600105460 /* StartsWithTest.swift */; };
 		D98B8E4B1AF2C28200105460 /* EndsWithTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E4A1AF2C28200105460 /* EndsWithTest.swift */; };
 		D98B8E4D1AF2C28700105460 /* EndsWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E4C1AF2C28700105460 /* EndsWith.swift */; };
+		D98B8E4F1AF2C3BD00105460 /* Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E4E1AF2C3BD00105460 /* Contains.swift */; };
+		D98B8E511AF2C3C600105460 /* ContainsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E501AF2C3C600105460 /* ContainsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		D98B8E481AF2B8B600105460 /* StartsWithTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartsWithTest.swift; sourceTree = "<group>"; };
 		D98B8E4A1AF2C28200105460 /* EndsWithTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndsWithTest.swift; sourceTree = "<group>"; };
 		D98B8E4C1AF2C28700105460 /* EndsWith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndsWith.swift; sourceTree = "<group>"; };
+		D98B8E4E1AF2C3BD00105460 /* Contains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contains.swift; sourceTree = "<group>"; };
+		D98B8E501AF2C3C600105460 /* ContainsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		D98B8E331AF2817E00105460 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				D98B8E4E1AF2C3BD00105460 /* Contains.swift */,
 				D98B8E4C1AF2C28700105460 /* EndsWith.swift */,
 				D98B8E361AF281DF00105460 /* Length.swift */,
 				D98B8E421AF2B77F00105460 /* Lowercase.swift */,
@@ -155,6 +160,7 @@
 		D98B8E391AF2827B00105460 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				D98B8E501AF2C3C600105460 /* ContainsTest.swift */,
 				D98B8E4A1AF2C28200105460 /* EndsWithTest.swift */,
 				D98B8E3A1AF282B700105460 /* LengthTest.swift */,
 				D98B8E441AF2B78800105460 /* LowercaseTest.swift */,
@@ -261,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98B8E4F1AF2C3BD00105460 /* Contains.swift in Sources */,
 				D98B8E131AF2801900105460 /* AppDelegate.swift in Sources */,
 				D98B8E371AF281DF00105460 /* Length.swift in Sources */,
 				D98B8E4D1AF2C28700105460 /* EndsWith.swift in Sources */,
@@ -275,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98B8E511AF2C3C600105460 /* ContainsTest.swift in Sources */,
 				D98B8E3D1AF2830600105460 /* Rule.swift in Sources */,
 				D98B8E3B1AF282B700105460 /* LengthTest.swift in Sources */,
 				D98B8E491AF2B8B600105460 /* StartsWithTest.swift in Sources */,
