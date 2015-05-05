@@ -60,4 +60,9 @@ public class Validator {
 
         return true
     }
+
+    // MARK: - Some Sugar
+    class public func addRule(rule: Rule) -> Validator {
+        return Validator().addRule(rule)
+    }
 }

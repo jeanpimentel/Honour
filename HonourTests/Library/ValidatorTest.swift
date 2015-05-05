@@ -178,4 +178,15 @@ class ValidatorTest: XCTestCase {
         XCTAssertFalse(validator.validate("FOOBAR"))
     }
 
+    // MARK: - Sugar
+    func testInstanceMethod() {
+        var validator = Validator.addRule(Uppercase())
+        validator.addRule(StartsWith("J"))
+        XCTAssertTrue(validator.validate("JEAN"))
+
+        validator = Validator.addRule(Uppercase()).addRule(StartsWith("J"))
+        XCTAssertTrue(validator.validate("JEAN"))
+
+        XCTAssertTrue(Validator.addRule(Uppercase()).addRule(StartsWith("J")).validate("JEAN"))
+    }
 }
