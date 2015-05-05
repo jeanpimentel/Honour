@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D95447FB1AF906F3002B4F33 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FA1AF906F3002B4F33 /* Validator.swift */; };
+		D95447FD1AF907F2002B4F33 /* ValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */; };
 		D98B8E131AF2801900105460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E121AF2801900105460 /* AppDelegate.swift */; };
 		D98B8E351AF2818C00105460 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E341AF2818C00105460 /* Rule.swift */; };
 		D98B8E371AF281DF00105460 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E361AF281DF00105460 /* Length.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D95447FA1AF906F3002B4F33 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorTest.swift; sourceTree = "<group>"; };
 		D98B8E0D1AF2801900105460 /* Honour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Honour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98B8E111AF2801900105460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98B8E121AF2801900105460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D98B8E341AF2818C00105460 /* Rule.swift */,
+				D95447FA1AF906F3002B4F33 /* Validator.swift */,
 				D98B8E331AF2817E00105460 /* Rules */,
 			);
 			path = Library;
@@ -152,6 +157,7 @@
 		D98B8E381AF2827B00105460 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */,
 				D98B8E391AF2827B00105460 /* Rules */,
 			);
 			path = Library;
@@ -268,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98B8E4F1AF2C3BD00105460 /* Contains.swift in Sources */,
+				D95447FB1AF906F3002B4F33 /* Validator.swift in Sources */,
 				D98B8E131AF2801900105460 /* AppDelegate.swift in Sources */,
 				D98B8E371AF281DF00105460 /* Length.swift in Sources */,
 				D98B8E4D1AF2C28700105460 /* EndsWith.swift in Sources */,
@@ -283,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98B8E511AF2C3C600105460 /* ContainsTest.swift in Sources */,
+				D95447FD1AF907F2002B4F33 /* ValidatorTest.swift in Sources */,
 				D98B8E3D1AF2830600105460 /* Rule.swift in Sources */,
 				D98B8E3B1AF282B700105460 /* LengthTest.swift in Sources */,
 				D98B8E491AF2B8B600105460 /* StartsWithTest.swift in Sources */,
