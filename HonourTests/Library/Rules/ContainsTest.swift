@@ -19,6 +19,8 @@ class ContainsTest: XCTestCase {
         XCTAssertTrue(Contains(value: "foo").validate("barbazfoo"))
         XCTAssertTrue(Contains(value: "foo", caseSensitive: true).validate("foobarbaz"))
         XCTAssertTrue(Contains(value: "foo", caseSensitive: false).validate("FOObarbaz"))
+        XCTAssertTrue(Contains("").validate(""))
+        XCTAssertTrue(Contains("foo", caseSensitive: true).validate("foobarbaz"))
     }
 
     func testNonContains() {

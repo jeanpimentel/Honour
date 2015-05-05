@@ -17,6 +17,8 @@ class StartsWithTest: XCTestCase {
         XCTAssertTrue(StartsWith(startValue: "foo").validate("foobarbaz"))
         XCTAssertTrue(StartsWith(startValue: "foo", caseSensitive: true).validate("foobarbaz"))
         XCTAssertTrue(StartsWith(startValue: "foo", caseSensitive: false).validate("FOObarbaz"))
+        XCTAssertTrue(StartsWith("").validate(""))
+        XCTAssertTrue(StartsWith("foo", caseSensitive: true).validate("foobarbaz"))
     }
 
     func testNonStartsWith() {

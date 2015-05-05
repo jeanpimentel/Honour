@@ -17,7 +17,16 @@ public class EndsWith : Rule {
         self.endValue = endValue;
     }
 
+    public init(_ endValue: String) {
+        self.endValue = endValue;
+    }
+
     public init(endValue: String, caseSensitive: Bool) {
+        self.endValue = endValue;
+        self.caseSensitive = caseSensitive;
+    }
+
+    public init(_ endValue: String, caseSensitive: Bool) {
         self.endValue = endValue;
         self.caseSensitive = caseSensitive;
     }

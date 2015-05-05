@@ -25,7 +25,7 @@ class ValidatorTest: XCTestCase {
     func testTwoRules() {
         let validator = Validator()
         validator.addRule(Uppercase())
-        validator.addRule(StartsWith(startValue: "J"))
+        validator.addRule(StartsWith("J"))
         XCTAssertTrue(validator.getRules().count == 2)
     }
 
@@ -60,7 +60,7 @@ class ValidatorTest: XCTestCase {
     func testAssertWithValidRules() {
         let validator = Validator()
         validator.addRule(Uppercase())
-        validator.addRule(StartsWith(startValue: "J"))
+        validator.addRule(StartsWith("J"))
 
         let result = validator.assert("JEAN")
         XCTAssertTrue(result.isValid)
@@ -70,7 +70,7 @@ class ValidatorTest: XCTestCase {
     func testAssertWithOneInvalidRule() {
         let validator = Validator()
         validator.addRule(Uppercase())
-        validator.addRule(StartsWith(startValue: "J"))
+        validator.addRule(StartsWith("J"))
 
         let result = validator.assert("FOOBAR")
         XCTAssertFalse(result.isValid)
@@ -81,7 +81,7 @@ class ValidatorTest: XCTestCase {
     func testAssertWithInvalidRules() {
         let validator = Validator()
         validator.addRule(Lowercase())
-        validator.addRule(StartsWith(startValue: "j"))
+        validator.addRule(StartsWith("j"))
 
         let result = validator.assert("FOOBAR")
         XCTAssertFalse(result.isValid)
@@ -115,7 +115,7 @@ class ValidatorTest: XCTestCase {
     func testCheckWithValidRules() {
         let validator = Validator()
         validator.addRule(Uppercase())
-        validator.addRule(StartsWith(startValue: "J"))
+        validator.addRule(StartsWith("J"))
 
         let result = validator.check("JEAN")
         XCTAssertTrue(result.isValid)
@@ -125,7 +125,7 @@ class ValidatorTest: XCTestCase {
     func testCheckWithOneInvalidRule() {
         let validator = Validator()
         validator.addRule(Uppercase())
-        validator.addRule(StartsWith(startValue: "J"))
+        validator.addRule(StartsWith("J"))
 
         let result = validator.check("FOOBAR")
         XCTAssertFalse(result.isValid)
@@ -136,7 +136,7 @@ class ValidatorTest: XCTestCase {
     func testCheckWithInvalidRule() {
         let validator = Validator()
         validator.addRule(Lowercase())
-        validator.addRule(StartsWith(startValue: "j"))
+        validator.addRule(StartsWith("j"))
 
         let result = validator.check("FOOBAR")
         XCTAssertFalse(result.isValid)
@@ -160,41 +160,22 @@ class ValidatorTest: XCTestCase {
     func testValidateWithValidRules() {
         let validator = Validator()
         validator.addRule(Uppercase())
-        validator.addRule(StartsWith(startValue: "J"))
+        validator.addRule(StartsWith("J"))
         XCTAssertTrue(validator.validate("JEAN"))
     }
 
     func testValidateWithOneInvalidRule() {
         let validator = Validator()
         validator.addRule(Uppercase())
-        validator.addRule(StartsWith(startValue: "J"))
+        validator.addRule(StartsWith("J"))
         XCTAssertFalse(validator.validate("FOOBAR"))
     }
 
     func testValidateWithInvalidRules() {
         let validator = Validator()
         validator.addRule(Lowercase())
-        validator.addRule(StartsWith(startValue: "j"))
+        validator.addRule(StartsWith("j"))
         XCTAssertFalse(validator.validate("FOOBAR"))
     }
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

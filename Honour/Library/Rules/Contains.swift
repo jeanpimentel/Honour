@@ -17,7 +17,16 @@ public class Contains : Rule {
         self.value = value;
     }
 
+    public init(_ value: String) {
+        self.value = value;
+    }
+
     public init(value: String, caseSensitive: Bool) {
+        self.value = value;
+        self.caseSensitive = caseSensitive;
+    }
+
+    public init(_ value: String, caseSensitive: Bool) {
         self.value = value;
         self.caseSensitive = caseSensitive;
     }

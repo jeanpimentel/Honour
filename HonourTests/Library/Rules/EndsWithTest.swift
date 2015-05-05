@@ -17,6 +17,8 @@ class EndsWithTest: XCTestCase {
         XCTAssertTrue(EndsWith(endValue: "foo").validate("barbazfoo"))
         XCTAssertTrue(EndsWith(endValue: "foo", caseSensitive: true).validate("barbazfoo"))
         XCTAssertTrue(EndsWith(endValue: "foo", caseSensitive: false).validate("barbazFOO"))
+        XCTAssertTrue(EndsWith("").validate(""))
+        XCTAssertTrue(EndsWith("foo", caseSensitive: true).validate("barbazfoo"))
     }
 
     func testNonEndsWith() {

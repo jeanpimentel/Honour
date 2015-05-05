@@ -17,7 +17,16 @@ public class StartsWith : Rule {
         self.startValue = startValue;
     }
 
+    public init(_ startValue: String) {
+        self.startValue = startValue;
+    }
+
     public init(startValue: String, caseSensitive: Bool) {
+        self.startValue = startValue;
+        self.caseSensitive = caseSensitive;
+    }
+
+    public init(_ startValue: String, caseSensitive: Bool) {
         self.startValue = startValue;
         self.caseSensitive = caseSensitive;
     }
