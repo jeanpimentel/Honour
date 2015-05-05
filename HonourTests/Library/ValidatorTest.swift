@@ -29,6 +29,12 @@ class ValidatorTest: XCTestCase {
         XCTAssertTrue(validator.getRules().count == 2)
     }
 
+    func testChainRules() {
+        let validator = Validator()
+        validator.addRule(Uppercase()).addRule(StartsWith(startValue: "J"))
+        XCTAssertTrue(validator.getRules().count == 2)
+    }
+
     // MARK: - Assert
     func testAssertWithoutRules() {
         let validator = Validator()

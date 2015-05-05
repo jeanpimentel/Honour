@@ -16,8 +16,9 @@ public class Validator {
         self.rules = []
     }
 
-    public func addRule(rule: Rule) {
+    public func addRule(rule: Rule) -> Validator {
         self.rules.append(rule)
+        return self
     }
 
     public func getRules() -> Array<Rule> {
