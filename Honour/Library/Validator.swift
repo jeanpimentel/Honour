@@ -62,7 +62,45 @@ public class Validator {
     }
 
     // MARK: - Some Sugar
+    public func mustBe(rule: Rule) -> Validator {
+        return self.addRule(rule)
+    }
+
+    public func mustHave(rule: Rule) -> Validator {
+        return self.addRule(rule)
+    }
+
+    public func and(rule: Rule) -> Validator {
+        return self.addRule(rule)
+    }
+
+    public func andMust(rule: Rule) -> Validator {
+        return self.addRule(rule)
+    }
+
+    public func andMustBe(rule: Rule) -> Validator {
+        return self.addRule(rule)
+    }
+
+    public func andMustHave(rule: Rule) -> Validator {
+        return self.addRule(rule)
+    }
+
     class public func addRule(rule: Rule) -> Validator {
         return Validator().addRule(rule)
     }
+
+    class public func must(rule: Rule) -> Validator {
+        return Validator().addRule(rule)
+    }
+
+    class public func mustBe(rule: Rule) -> Validator {
+        return Validator().addRule(rule)
+    }
+
+    class public func mustHave(rule: Rule) -> Validator {
+        return Validator().addRule(rule)
+    }
+
+
 }

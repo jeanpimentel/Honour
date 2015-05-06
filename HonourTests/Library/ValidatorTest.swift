@@ -189,4 +189,12 @@ class ValidatorTest: XCTestCase {
 
         XCTAssertTrue(Validator.addRule(Uppercase()).addRule(StartsWith("J")).validate("JEAN"))
     }
+
+    func testSyntaxSugarMethods() {
+        XCTAssertTrue(Validator.addRule(Uppercase()).addRule(StartsWith("J")).validate("JEAN"))
+        XCTAssertTrue(Validator().addRule(Uppercase()).addRule(StartsWith("J")).validate("JEAN"))
+        XCTAssertTrue(Validator.mustBe(Uppercase()).andMust(StartsWith("J")).validate("JEAN"))
+        XCTAssertTrue(Validator.must(StartsWith("J")).and(EndsWith("N")).validate("JEAN"))
+        XCTAssertTrue(Validator.must(StartsWith("J")).and(EndsWith("N")).andMustHave(Length(min: 3, max: 60)).validate("JEAN"))
+    }
 }
