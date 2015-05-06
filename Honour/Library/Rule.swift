@@ -8,6 +8,21 @@
 
 import Foundation
 
-public protocol Rule {
-    func validate(value: String) -> Bool
+public class Rule : Hashable {
+
+    public var hashValue : Int {
+        return ObjectIdentifier(self).hashValue
+    }
+
+    public init() {
+    }
+
+    public func validate(value: String) -> Bool {
+        return false
+    }
+
+}
+
+public func ==(lhs: Rule, rhs: Rule) -> Bool {
+    return lhs.hashValue == rhs.hashValue
 }

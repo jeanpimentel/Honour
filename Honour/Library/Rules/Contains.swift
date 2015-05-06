@@ -31,7 +31,7 @@ public class Contains : Rule {
         self.caseSensitive = caseSensitive;
     }
 
-    public func validate(value: String) -> Bool {
+    public override func validate(value: String) -> Bool {
 
         if count(self.value) == 0 {
             return true

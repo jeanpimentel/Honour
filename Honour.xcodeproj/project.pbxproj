@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D93132BD1AFA6E5900E352C4 /* RuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93132BC1AFA6E5900E352C4 /* RuleTest.swift */; };
 		D95447FB1AF906F3002B4F33 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FA1AF906F3002B4F33 /* Validator.swift */; };
 		D95447FD1AF907F2002B4F33 /* ValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */; };
 		D9715D741AFA496100352FD1 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9715D731AFA496100352FD1 /* Length.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D93132BC1AFA6E5900E352C4 /* RuleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleTest.swift; sourceTree = "<group>"; };
 		D95447FA1AF906F3002B4F33 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorTest.swift; sourceTree = "<group>"; };
 		D9715D731AFA496100352FD1 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		D98B8E381AF2827B00105460 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D93132BC1AFA6E5900E352C4 /* RuleTest.swift */,
 				D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */,
 				D98B8E391AF2827B00105460 /* Rules */,
 			);
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93132BD1AFA6E5900E352C4 /* RuleTest.swift in Sources */,
 				D98B8E511AF2C3C600105460 /* ContainsTest.swift in Sources */,
 				D95447FD1AF907F2002B4F33 /* ValidatorTest.swift in Sources */,
 				D98B8E3D1AF2830600105460 /* Rule.swift in Sources */,

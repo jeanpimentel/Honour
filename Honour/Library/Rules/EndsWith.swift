@@ -31,7 +31,7 @@ public class EndsWith : Rule {
         self.caseSensitive = caseSensitive;
     }
 
-    public func validate(value: String) -> Bool {
+    public override func validate(value: String) -> Bool {
 
         if count(self.endValue) == 0 {
             return true
