@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		D95447FB1AF906F3002B4F33 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FA1AF906F3002B4F33 /* Validator.swift */; };
 		D95447FD1AF907F2002B4F33 /* ValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */; };
+		D9715D741AFA496100352FD1 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9715D731AFA496100352FD1 /* Length.swift */; };
 		D98B8E131AF2801900105460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E121AF2801900105460 /* AppDelegate.swift */; };
 		D98B8E351AF2818C00105460 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E341AF2818C00105460 /* Rule.swift */; };
-		D98B8E371AF281DF00105460 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E361AF281DF00105460 /* Length.swift */; };
 		D98B8E3B1AF282B700105460 /* LengthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E3A1AF282B700105460 /* LengthTest.swift */; };
-		D98B8E3C1AF2830300105460 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E361AF281DF00105460 /* Length.swift */; };
 		D98B8E3D1AF2830600105460 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E341AF2818C00105460 /* Rule.swift */; };
 		D98B8E3F1AF2B46A00105460 /* Uppercase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E3E1AF2B46A00105460 /* Uppercase.swift */; };
 		D98B8E411AF2B4A000105460 /* UppercaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B8E401AF2B4A000105460 /* UppercaseTest.swift */; };
@@ -40,13 +39,13 @@
 /* Begin PBXFileReference section */
 		D95447FA1AF906F3002B4F33 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorTest.swift; sourceTree = "<group>"; };
+		D9715D731AFA496100352FD1 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		D98B8E0D1AF2801900105460 /* Honour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Honour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98B8E111AF2801900105460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98B8E121AF2801900105460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D98B8E221AF2801900105460 /* HonourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HonourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98B8E271AF2801900105460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98B8E341AF2818C00105460 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
-		D98B8E361AF281DF00105460 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		D98B8E3A1AF282B700105460 /* LengthTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthTest.swift; sourceTree = "<group>"; };
 		D98B8E3E1AF2B46A00105460 /* Uppercase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uppercase.swift; sourceTree = "<group>"; };
 		D98B8E401AF2B4A000105460 /* UppercaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UppercaseTest.swift; sourceTree = "<group>"; };
@@ -146,7 +145,7 @@
 			children = (
 				D98B8E4E1AF2C3BD00105460 /* Contains.swift */,
 				D98B8E4C1AF2C28700105460 /* EndsWith.swift */,
-				D98B8E361AF281DF00105460 /* Length.swift */,
+				D9715D731AFA496100352FD1 /* Length.swift */,
 				D98B8E421AF2B77F00105460 /* Lowercase.swift */,
 				D98B8E461AF2B83100105460 /* StartsWith.swift */,
 				D98B8E3E1AF2B46A00105460 /* Uppercase.swift */,
@@ -276,8 +275,8 @@
 				D98B8E4F1AF2C3BD00105460 /* Contains.swift in Sources */,
 				D95447FB1AF906F3002B4F33 /* Validator.swift in Sources */,
 				D98B8E131AF2801900105460 /* AppDelegate.swift in Sources */,
-				D98B8E371AF281DF00105460 /* Length.swift in Sources */,
 				D98B8E4D1AF2C28700105460 /* EndsWith.swift in Sources */,
+				D9715D741AFA496100352FD1 /* Length.swift in Sources */,
 				D98B8E471AF2B83100105460 /* StartsWith.swift in Sources */,
 				D98B8E3F1AF2B46A00105460 /* Uppercase.swift in Sources */,
 				D98B8E351AF2818C00105460 /* Rule.swift in Sources */,
@@ -297,7 +296,6 @@
 				D98B8E451AF2B78800105460 /* LowercaseTest.swift in Sources */,
 				D98B8E411AF2B4A000105460 /* UppercaseTest.swift in Sources */,
 				D98B8E4B1AF2C28200105460 /* EndsWithTest.swift in Sources */,
-				D98B8E3C1AF2830300105460 /* Length.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

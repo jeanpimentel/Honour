@@ -13,9 +13,20 @@ public class Length : Rule {
     private var min: Int?
     private var max: Int?
 
-    public init(min: Int? = nil, max: Int? = nil) {
-        self.min = min;
-        self.max = max;
+    public init() {
+    }
+
+    public init(min: Int) {
+        self.min = min
+    }
+
+    public init(max: Int) {
+        self.max = max
+    }
+
+    public init(min: Int, max: Int) {
+        self.min = min
+        self.max = max
     }
 
     public func validate(value: String) -> Bool {
