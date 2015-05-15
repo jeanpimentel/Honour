@@ -1,5 +1,6 @@
 # Honour
 
+[![Language](https://img.shields.io/badge/lang-Swift-orange.svg)](https://developer.apple.com/swift/)
 [![License](https://img.shields.io/cocoapods/l/Honour.svg)](https://cocoapods.org/pods/Honour)
 [![Version](https://img.shields.io/cocoapods/v/Honour.svg)](https://cocoapods.org/pods/Honour)
 
@@ -10,7 +11,7 @@ Validator.mustBe(Uppercase()).andMust(StartsWith("F")).validate("FOOBAR")
 ```
 
 
-# Features
+# Usage
 
 ## Single Validation
 
@@ -25,7 +26,7 @@ It is possible to use validators in a chain.
 
 ```swift
 let v = Validator.addRule(Lowercase()).addRule(NoWhitespace()).addRule(Length(min: 3, max: 60))
-v.validate("jeanpimentel")
+v.validate("jeanpimentel") // true
 ```
 
 ## Syntax sugar
@@ -33,8 +34,8 @@ v.validate("jeanpimentel")
 It is possible to use some syntax tricks to be highly expressive.
 
 ```swift
-let v = Validator.mustHave(Length(min: 3, max: 60)).and(NoWhitespace()).andMustHave(Length(min: 3, max: 60))
-v.validate("jeanpimentel")
+let v = Validator.mustHave(Length(min: 3, max: 60)).and(NoWhitespace()).andMustBe(Lowercase())
+v.validate("jeanpimentel") // true
 ```
 
 ## Granularity control
@@ -46,6 +47,9 @@ We have 3 validation methods
 - `check()` - returns a tuple with true/false and the first error, if any.
 
 ### Validate
+```swift
+func validate(value: String) -> Bool
+```
 
 ```swift
 let validator = Validator().addRule(Uppercase()).addRule(StartsWith("J"))
@@ -53,7 +57,10 @@ validator.validate("JEAN") // true
 validator.validate("PIMENTEL") // false
 ```
 
-### Assert
+### Assert 
+```swift
+func assert(value: String) -> (isValid: Bool, invalidRules: Array<Rule>)
+```
 
 ```swift
 let validator = Validator().addRule(Uppercase()).addRule(StartsWith("J"))
@@ -72,6 +79,9 @@ result.invalidRules // [Uppercase(), StartsWith("J")]
 ```
 
 ### Check
+```swift
+func check(value: String) -> (isValid: Bool, invalidRule: Rule?)
+```
 
 ```swift
 let validator = Validator().addRule(Uppercase()).addRule(StartsWith("J"))
@@ -90,29 +100,49 @@ result.invalidRule // StartsWith("J")
 ```
 
 
+# Installation
 
+Package is available on [Cocoapods](https://cocoapods.org/pods/Honour). See the ["Using CocoaPods" guide for more information](https://guides.cocoapods.org/using/using-cocoapods.html).
+
+```ruby
+use_frameworks!
+platform :ios, '7.0'
+pod 'Honour', '~> 0.1.0'
+```
+
+## Requirements
+
+|                       Honour Version                       | Minimum iOS Target |               Notes                |
+|:----------------------------------------------------------:|:------------------:|:----------------------------------:|
+| [0.1.0](https://github.com/jeanpimentel/Honour/tree/0.1.0) |       iOS 7        | Xcode 6.3 (Swift 1.2) is required. |
+
+
+# Contributing
+
+- If you **found a bug**, _and can provide steps to reliably reproduce it_, open an issue.
+
+- If you **have a feature request**, open an issue.
+
+- If you **want to contribute**, submit a pull request.
+	1. Fork it!
+	2. Create your feature branch: `git checkout -b my-new-feature`
+	3. Commit your changes: `git commit -am 'Add some feature'`
+	4. Push to the branch: `git push origin my-new-feature`
+	5. Submit a pull request
+
+# Validators
+
+Working in progress...
+
+**Implemented:**
+
+- Contains
+- EndsWith
+- Length
+- Lowercase
+- StartsWith
+- Uppercase
 
 # License
 
-The MIT License (MIT)
-
-Copyright (c) 2015 Jean Pimentel
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
+Honour is released under the MIT license. See [LICENSE](LICENSE) for details.
