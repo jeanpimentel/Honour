@@ -41,17 +41,11 @@ public class EndsWith : Rule {
     }
 
     func validateSensitive(value: String) -> Bool {
-        if let range = value.rangeOfString(self.endValue) {
-            return range.endIndex == value.endIndex
-        }
-        return false
+        return value.hasSuffix(self.endValue)
     }
 
     func validateInsensitive(value: String) -> Bool {
-        if let range = value.lowercaseString.rangeOfString(self.endValue.lowercaseString) {
-            return range.endIndex == value.endIndex
-        }
-        return false
+        return value.lowercaseString.hasSuffix(self.endValue.lowercaseString) || value.uppercaseString.hasSuffix(self.endValue.uppercaseString)
     }
 
 }

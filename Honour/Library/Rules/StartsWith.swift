@@ -41,17 +41,11 @@ public class StartsWith : Rule {
     }
 
     func validateSensitive(value: String) -> Bool {
-        if let range = value.rangeOfString(self.startValue) {
-            return range.startIndex == value.startIndex
-        }
-        return false
+        return value.hasPrefix(self.startValue)
     }
 
     func validateInsensitive(value: String) -> Bool {
-        if let range = value.lowercaseString.rangeOfString(self.startValue.lowercaseString) {
-            return range.startIndex == value.startIndex
-        }
-        return false
+        return value.lowercaseString.hasPrefix(self.startValue.lowercaseString) || value.uppercaseString.hasPrefix(self.startValue.uppercaseString)
     }
 
 }
