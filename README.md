@@ -10,6 +10,7 @@ Validation library for iOS inspired by Respect/Validation.
 Validator.mustBe(Uppercase()).andMust(StartsWith("F")).validate("FOOBAR")
 ```
 
+:exclamation: If you want to use this library in Objective-C classes, check [HonourBridge](https://github.com/jeanpimentel/HonourBridge) repo.
 
 # Usage
 
