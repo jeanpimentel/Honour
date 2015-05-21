@@ -107,14 +107,14 @@ Package is available on [Cocoapods](https://cocoapods.org/pods/Honour). See the 
 ```ruby
 use_frameworks!
 platform :ios, '7.0'
-pod 'Honour', '~> 0.1.0'
+pod 'Honour', '~> 0.1.1'
 ```
 
 ## Requirements
 
 |                       Honour Version                       | Minimum iOS Target |               Notes                |
 |:----------------------------------------------------------:|:------------------:|:----------------------------------:|
-| [0.1.0](https://github.com/jeanpimentel/Honour/tree/0.1.0) |       iOS 7        | Xcode 6.3 (Swift 1.2) is required. |
+| [0.1.1](https://github.com/jeanpimentel/Honour/tree/0.1.1) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
 
 
 # Contributing
@@ -132,16 +132,30 @@ pod 'Honour', '~> 0.1.0'
 
 # Validators
 
-Working in progress...
+Always a working in progress...
 
-**Implemented:**
+**Available now:**
 
+- AlwaysInvalid
+- AlwaysValid
 - Contains
+- Email
 - EndsWith
 - Length
 - Lowercase
+- NoWhitespace
+- NotEmpty
+- Regex
+- Roman
 - StartsWith
 - Uppercase
+- Version
+
+
+**Localized validators**
+
+- Brazil (BR)
+	- CPF
 
 # License
 
