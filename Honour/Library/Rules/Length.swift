@@ -26,8 +26,13 @@ public class Length : Rule {
         self.max = max
     }
 
-    public override func validate(value: String) -> Bool {
-        return self.validateMin(value) && self.validateMax(value)
+    public override func validate(value: AnyObject) -> Bool {
+
+        if let v = value as? String {
+            return self.validateMin(v) && self.validateMax(v)
+        }
+
+        return false
     }
 
     func validateMin(value: String) -> Bool {

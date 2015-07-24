@@ -10,17 +10,23 @@ import Foundation
 
 public class NoWhitespace : Rule {
 
-    public override func validate(value: String) -> Bool {
+    public override func validate(value: AnyObject) -> Bool {
 
-        if count(value) == 0 {
+        if let v = value as? String {
+
+            if count(v) == 0 {
+                return true
+            }
+
+            let invalidSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+            if let range = v.rangeOfCharacterFromSet(invalidSet) {
+                return false
+            }
+            
             return true
+
         }
 
-        let invalidSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        if let range = value.rangeOfCharacterFromSet(invalidSet) {
-            return false
-        }
-
-        return true
+        return false
     }
 }

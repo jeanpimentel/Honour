@@ -10,7 +10,12 @@ import Foundation
 
 public class Lowercase : Rule {
 
-    public override func validate(value: String) -> Bool {
-        return value.lowercaseString == value
+    public override func validate(value: AnyObject) -> Bool {
+        
+        if let v = value as? String {
+            return v.lowercaseString == v
+        }
+
+        return false
     }
 }

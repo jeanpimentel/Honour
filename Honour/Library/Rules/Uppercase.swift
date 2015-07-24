@@ -10,7 +10,12 @@ import Foundation
 
 public class Uppercase : Rule {
 
-    public override func validate(value: String) -> Bool {
-        return value.uppercaseString == value
+    public override func validate(value: AnyObject) -> Bool {
+
+        if let v = value as? String {
+            return v.uppercaseString == v
+        }
+
+        return false
     }
 }

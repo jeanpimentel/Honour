@@ -17,7 +17,7 @@ public class Rule : Hashable {
     public init() {
     }
 
-    public func validate(value: String) -> Bool {
+    public func validate(value: AnyObject) -> Bool {
         return false
     }
 

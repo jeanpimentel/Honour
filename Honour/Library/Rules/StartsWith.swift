@@ -31,13 +31,18 @@ public class StartsWith : Rule {
         self.caseSensitive = caseSensitive;
     }
 
-    public override func validate(value: String) -> Bool {
+    public override func validate(value: AnyObject) -> Bool {
 
-        if count(self.startValue) == 0 {
-            return true
+        if let v = value as? String {
+
+            if count(self.startValue) == 0 {
+                return true
+            }
+
+            return self.caseSensitive ? validateSensitive(v) : validateInsensitive(v)
         }
 
-        return self.caseSensitive ? validateSensitive(value) : validateInsensitive(value)
+        return false
     }
 
     func validateSensitive(value: String) -> Bool {

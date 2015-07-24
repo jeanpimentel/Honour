@@ -26,7 +26,7 @@ public class Validator {
     }
 
 
-    public func assert(value: String) -> (isValid: Bool, invalidRules: Array<Rule>) {
+    public func assert(value: AnyObject) -> (isValid: Bool, invalidRules: Array<Rule>) {
         
         var rules: Array<Rule> = []
 
@@ -39,7 +39,7 @@ public class Validator {
         return (rules.count == 0, rules)
     }
 
-    public func check(value: String) -> (isValid: Bool, invalidRule: Rule?) {
+    public func check(value: AnyObject) -> (isValid: Bool, invalidRule: Rule?) {
 
         for rule in self.rules {
             if !rule.validate(value) {
@@ -50,7 +50,7 @@ public class Validator {
         return (true, nil)
     }
 
-    public func validate(value: String) -> Bool {
+    public func validate(value: AnyObject) -> Bool {
 
         for rule in self.rules {
             if !rule.validate(value) {

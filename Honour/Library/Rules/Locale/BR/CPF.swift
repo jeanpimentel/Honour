@@ -20,48 +20,54 @@ public class BR_CPF : Rule {
         self.strict = strict;
     }
 
-    public override func validate(value: String) -> Bool {
+    public override func validate(value: AnyObject) -> Bool {
 
-        let numbers = filter(value, {contains("0123456789", $0)})
-        if numbers.count != 11 {
-            return false
-        }
+        if let v = value as? String {
 
-
-        if self.strict && count(value) != 11 {
-            return false
-        }
-
-
-        var allEquals = true
-        for char in numbers {
-            if char != numbers[0] {
-                allEquals = false
+            let numbers = filter(v, {contains("0123456789", $0)})
+            if numbers.count != 11 {
+                return false
             }
+
+
+            if self.strict && count(v) != 11 {
+                return false
+            }
+
+
+            var allEquals = true
+            for char in numbers {
+                if char != numbers[0] {
+                    allEquals = false
+                }
+            }
+            if allEquals {
+                return false
+            }
+
+
+            var s, n, i : Int
+
+            // First digit
+            for s = 10, n = 0, i = 0; s >= 2; n += String(numbers[i++]).toInt()! * s-- {}
+            n %= 11
+
+            if String(numbers[9]).toInt()! != (n < 2 ? 0 : 11 - n) {
+                return false
+            }
+
+            // Second digit
+            for s = 11, n = 0, i = 0; s >= 2; n += String(numbers[i++]).toInt()! * s-- {}
+            n %= 11
+            
+            if String(numbers[10]).toInt()! != (n < 2 ? 0 : 11 - n) {
+                return false
+            }
+            
+            return true
+
         }
-        if allEquals {
-            return false
-        }
 
-
-        var s, n, i : Int
-
-        // First digit
-        for s = 10, n = 0, i = 0; s >= 2; n += String(numbers[i++]).toInt()! * s-- {}
-        n %= 11
-
-        if String(numbers[9]).toInt()! != (n < 2 ? 0 : 11 - n) {
-            return false
-        }
-
-        // Second digit
-        for s = 11, n = 0, i = 0; s >= 2; n += String(numbers[i++]).toInt()! * s-- {}
-        n %= 11
-
-        if String(numbers[10]).toInt()! != (n < 2 ? 0 : 11 - n) {
-            return false
-        }
-        
-        return true
+        return false
     }
 }
