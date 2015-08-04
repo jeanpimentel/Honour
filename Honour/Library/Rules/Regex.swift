@@ -31,12 +31,17 @@ public class Regex: Rule {
         self.caseInsensitive = caseInsensitive;
     }
 
-    public override func validate(value: String) -> Bool {
+    public override func validate(value: AnyObject) -> Bool {
 
-        let range = NSMakeRange(0, count(value))
+        if let v = value as? String {
 
-        if let r = NSRegularExpression(pattern: self.regex, options: ((self.caseInsensitive) ? .CaseInsensitive : .allZeros), error: nil) {
-            return r.rangeOfFirstMatchInString(value, options: .allZeros, range: range).location != NSNotFound
+            let range = NSMakeRange(0, count(v))
+
+            if let r = NSRegularExpression(pattern: self.regex, options: ((self.caseInsensitive) ? .CaseInsensitive : .allZeros), error: nil) {
+                return r.rangeOfFirstMatchInString(v, options: .allZeros, range: range).location != NSNotFound
+            }
+            
+            return false
         }
 
         return false

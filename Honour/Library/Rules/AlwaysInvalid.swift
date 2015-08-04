@@ -10,7 +10,7 @@ import Foundation
 
 public class AlwaysInvalid: Rule {
 
-    public override func validate(value: String) -> Bool {
+    public override func validate(value: AnyObject) -> Bool {
         return false
     }
 

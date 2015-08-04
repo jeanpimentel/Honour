@@ -10,11 +10,16 @@ import Foundation
 
 public class NotEmpty : Rule {
 
-    public override func validate(value: String) -> Bool {
+    public override func validate(value: AnyObject) -> Bool {
 
-        let invalidSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        var trimmed = value.stringByTrimmingCharactersInSet(invalidSet)
+        if let v = value as? String {
 
-        return count(trimmed) != 0
+            let invalidSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+            var trimmed = v.stringByTrimmingCharactersInSet(invalidSet)
+
+            return count(trimmed) != 0
+        }
+
+        return false
     }
 }
