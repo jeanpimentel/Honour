@@ -49,7 +49,7 @@ We have 3 validation methods
 
 ### Validate
 ```swift
-func validate(value: String) -> Bool
+func validate(value: AnyObject) -> Bool
 ```
 
 ```swift
@@ -60,7 +60,7 @@ validator.validate("PIMENTEL") // false
 
 ### Assert 
 ```swift
-func assert(value: String) -> (isValid: Bool, invalidRules: Array<Rule>)
+func assert(value: AnyObject) -> (isValid: Bool, invalidRules: Array<Rule>)
 ```
 
 ```swift
@@ -81,7 +81,7 @@ result.invalidRules // [Uppercase(), StartsWith("J")]
 
 ### Check
 ```swift
-func check(value: String) -> (isValid: Bool, invalidRule: Rule?)
+func check(value: AnyObject) -> (isValid: Bool, invalidRule: Rule?)
 ```
 
 ```swift
@@ -108,14 +108,14 @@ Package is available on [Cocoapods](https://cocoapods.org/pods/Honour). See the 
 ```ruby
 use_frameworks!
 platform :ios, '7.0'
-pod 'Honour', '~> 0.1.1'
+pod 'Honour', '~> 1.0.0'
 ```
 
 ## Requirements
 
 |                       Honour Version                       | Minimum iOS Target |               Notes                |
 |:----------------------------------------------------------:|:------------------:|:----------------------------------:|
-| [0.1.1](https://github.com/jeanpimentel/Honour/tree/0.1.1) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
+| [0.1.1](https://github.com/jeanpimentel/Honour/tree/1.0.0) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
 
 
 # Contributing
@@ -139,12 +139,18 @@ Always a working in progress...
 
 - AlwaysInvalid
 - AlwaysValid
+- Between
 - Contains
 - Email
 - EndsWith
+- HexRGBColor
 - Length
 - Lowercase
+- Max
+- Min
+- Negative
 - NoWhitespace
+- Positive
 - NotEmpty
 - Regex
 - Roman

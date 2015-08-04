@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Honour"
-  s.version      = "0.1.1"
+  s.version      = "1.0.0"
   s.summary      = "iOS Validation Library"
   s.description  = "Validation library write in Swift for iOS projects."
   s.homepage     = "https://github.com/jeanpimentel/Honour"
