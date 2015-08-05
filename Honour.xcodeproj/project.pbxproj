@@ -19,6 +19,7 @@
 		D925786B1B7240CE00AF5882 /* Even.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925786A1B7240CE00AF5882 /* Even.swift */; };
 		D925786D1B72447E00AF5882 /* Odd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925786C1B72447E00AF5882 /* Odd.swift */; };
 		D925786F1B7244BB00AF5882 /* OddTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925786E1B7244BB00AF5882 /* OddTest.swift */; };
+		D92578711B72462300AF5882 /* When.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92578701B72462300AF5882 /* When.swift */; };
 		D93132BD1AFA6E5900E352C4 /* RuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93132BC1AFA6E5900E352C4 /* RuleTest.swift */; };
 		D95447FB1AF906F3002B4F33 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FA1AF906F3002B4F33 /* Validator.swift */; };
 		D95447FD1AF907F2002B4F33 /* ValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */; };
@@ -84,6 +85,7 @@
 		D925786A1B7240CE00AF5882 /* Even.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Even.swift; sourceTree = "<group>"; };
 		D925786C1B72447E00AF5882 /* Odd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Odd.swift; sourceTree = "<group>"; };
 		D925786E1B7244BB00AF5882 /* OddTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OddTest.swift; sourceTree = "<group>"; };
+		D92578701B72462300AF5882 /* When.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = When.swift; sourceTree = "<group>"; };
 		D93132BC1AFA6E5900E352C4 /* RuleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleTest.swift; sourceTree = "<group>"; };
 		D95447FA1AF906F3002B4F33 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D95447FC1AF907F2002B4F33 /* ValidatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorTest.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				D98B8E461AF2B83100105460 /* StartsWith.swift */,
 				D98B8E3E1AF2B46A00105460 /* Uppercase.swift */,
 				D9739C561B0BCCD2003ED227 /* Version.swift */,
+				D92578701B72462300AF5882 /* When.swift */,
 				D98259551B0A270D00417C2C /* Locale */,
 			);
 			path = Rules;
@@ -431,6 +434,7 @@
 				D98B8E431AF2B77F00105460 /* Lowercase.swift in Sources */,
 				D982596E1B0B61CA00417C2C /* Email.swift in Sources */,
 				D982594E1B0A1D6900417C2C /* NoWhitespace.swift in Sources */,
+				D92578711B72462300AF5882 /* When.swift in Sources */,
 				D98259681B0A791400417C2C /* AlwaysValid.swift in Sources */,
 				D98259581B0A270D00417C2C /* CPF.swift in Sources */,
 				D92578631B71444500AF5882 /* Negative.swift in Sources */,
