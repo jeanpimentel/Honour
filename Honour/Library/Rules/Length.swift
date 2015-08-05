@@ -21,6 +21,11 @@ public class Length : Rule {
         self.max = max
     }
 
+    public init(equal: Int) {
+        self.min = equal
+        self.max = equal
+    }
+
     public init(min: Int, max: Int) {
         self.min = min
         self.max = max

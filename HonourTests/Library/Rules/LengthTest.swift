@@ -18,6 +18,9 @@ class LengthTest: XCTestCase {
         XCTAssertTrue(Length(min: 1).validate("jeanpimentel"))
         XCTAssertTrue(Length(max: 12).validate("jeanpimentel"))
         XCTAssertTrue(Length(max: 15).validate("jeanpimentel"))
+        XCTAssertTrue(Length(equal: 0).validate(""))
+        XCTAssertTrue(Length(equal: 3).validate("   "))
+        XCTAssertTrue(Length(equal: 12).validate("jeanpimentel"))
     }
 
     func testInvalidLength() {
@@ -25,6 +28,8 @@ class LengthTest: XCTestCase {
         XCTAssertFalse(Length(min: 1, max: 3).validate("jeanpimentel"))
         XCTAssertFalse(Length(min: 15).validate("jeanpimentel"))
         XCTAssertFalse(Length(max: 10).validate("jeanpimentel"))
+        XCTAssertFalse(Length(equal: 0).validate(" "))
+        XCTAssertFalse(Length(equal: 13).validate("jeanpimentel"))
     }
 
 }
