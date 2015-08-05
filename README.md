@@ -115,7 +115,8 @@ pod 'Honour', '~> 1.0.0'
 
 |                       Honour Version                       | Minimum iOS Target |               Notes                |
 |:----------------------------------------------------------:|:------------------:|:----------------------------------:|
-| [0.1.1](https://github.com/jeanpimentel/Honour/tree/1.0.0) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
+| [1.0.0](https://github.com/jeanpimentel/Honour/tree/1.0.0) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
+| [0.1.1](https://github.com/jeanpimentel/Honour/tree/0.1.1) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
 
 
 # Contributing
@@ -137,32 +138,32 @@ Always a working in progress...
 
 **Available now:**
 
-- AlwaysInvalid
-- AlwaysValid
-- Between
-- Contains
-- Email
-- EndsWith
-- HexRGBColor
-- Length
-- Lowercase
-- Max
-- Min
-- Negative
-- NoWhitespace
-- Positive
-- NotEmpty
-- Regex
-- Roman
-- StartsWith
-- Uppercase
-- Version
+- [AlwaysInvalid](HonourTests/Library/Rules/AlwaysInvalidTest.swift)
+- [AlwaysValid](HonourTests/Library/Rules/AlwaysValidTest.swift)
+- [Between](HonourTests/Library/Rules/BetweenTest.swift)
+- [Contains](HonourTests/Library/Rules/ContainsTest.swift)
+- [Email](HonourTests/Library/Rules/EmailTest.swift)
+- [EndsWith](HonourTests/Library/Rules/EndsWithTest.swift)
+- [HexRGBColor](HonourTests/Library/Rules/HexRGBColorTest.swift)
+- [Length](HonourTests/Library/Rules/LengthTest.swift)
+- [Lowercase](HonourTests/Library/Rules/LowercaseTest.swift)
+- [Max](HonourTests/Library/Rules/MaxTest.swift)
+- [Min](HonourTests/Library/Rules/MinTest.swift)
+- [Negative](HonourTests/Library/Rules/NegativeTest.swift)
+- [NoWhitespace](HonourTests/Library/Rules/NoWhitespaceTest.swift)
+- [Positive](HonourTests/Library/Rules/PositiveTest.swift)
+- [NotEmpty](HonourTests/Library/Rules/NotEmptyTest.swift)
+- [Regex](HonourTests/Library/Rules/RegexTest.swift)
+- [Roman](HonourTests/Library/Rules/RomanTest.swift)
+- [StartsWith](HonourTests/Library/Rules/StartsWithTest.swift)
+- [Uppercase](HonourTests/Library/Rules/UppercaseTest.swift)
+- [Version](HonourTests/Library/Rules/VersionTest.swift)
 
 
 **Localized validators**
 
 - Brazil (BR)
-	- CPF
+	- [CPF](HonourTests/Library/Rules/Locale/BR/CPFTest.swift)
 
 # License
 
