@@ -10,6 +10,17 @@ import Foundation
 
 public class Validator : AllOf {
 
+    public override init(_ rules: Rule...) {
+        super.init()
+        for rule in rules {
+            if let allOf = rule as? AllOf {
+                self.addRules(allOf.getRules())
+            } else {
+                self.addRule(rule)
+            }
+        }
+    }
+
     public override func addRule(rule: Rule) -> Validator {
         self.rules.append(rule)
         return self
