@@ -108,14 +108,14 @@ Package is available on [Cocoapods](https://cocoapods.org/pods/Honour). See the 
 ```ruby
 use_frameworks!
 platform :ios, '7.0'
-pod 'Honour', '~> 1.1.0'
+pod 'Honour', '~> 1.1.1'
 ```
 
 ## Requirements
 
 |                       Honour Version                       | Minimum iOS Target |               Notes                |
 |:----------------------------------------------------------:|:------------------:|:----------------------------------:|
-| [1.1.0](https://github.com/jeanpimentel/Honour/tree/1.1.0) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
+| [1.1.1](https://github.com/jeanpimentel/Honour/tree/1.1.1) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
 
 
 # Contributing

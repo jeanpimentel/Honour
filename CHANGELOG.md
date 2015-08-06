@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 (2015/08/06)
+## 1.1.1 (2015/08/06)
 - Refactor Validator class
 - Added new rules:
 	- AllOf, NoneOf, OneOf
