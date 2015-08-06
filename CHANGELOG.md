@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 (2015/08/06)
+- Refactor Validator class
+- Added new rules:
+	- AllOf, NoneOf, OneOf
+	- Even, Odd
+- Refactored rules: 
+	- Length - now supports Length(equal:)
+
 ## 1.0.0 (2015/08/04)
 - Change library to validate not only String :exclamation:
 - Added new rules:
