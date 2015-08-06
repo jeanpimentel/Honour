@@ -108,15 +108,14 @@ Package is available on [Cocoapods](https://cocoapods.org/pods/Honour). See the 
 ```ruby
 use_frameworks!
 platform :ios, '7.0'
-pod 'Honour', '~> 1.0.0'
+pod 'Honour', '~> 1.1.0'
 ```
 
 ## Requirements
 
 |                       Honour Version                       | Minimum iOS Target |               Notes                |
 |:----------------------------------------------------------:|:------------------:|:----------------------------------:|
-| [1.0.0](https://github.com/jeanpimentel/Honour/tree/1.0.0) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
-| [0.1.1](https://github.com/jeanpimentel/Honour/tree/0.1.1) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
+| [1.1.0](https://github.com/jeanpimentel/Honour/tree/1.1.0) |       iOS 7        | Swift 1.2 (Xcode 6.3) is required. |
 
 
 # Contributing
@@ -138,12 +137,16 @@ Always a working in progress...
 
 **Available now:**
 
+- [AllOf](HonourTests/Library/Rules/AllOfTest.swift)
 - [AlwaysInvalid](HonourTests/Library/Rules/AlwaysInvalidTest.swift)
 - [AlwaysValid](HonourTests/Library/Rules/AlwaysValidTest.swift)
 - [Between](HonourTests/Library/Rules/BetweenTest.swift)
+- [Composite](HonourTests/Library/Rules/CompositeTest.swift)
 - [Contains](HonourTests/Library/Rules/ContainsTest.swift)
+- [CountryCode](HonourTests/Library/Rules/CountryCodeTest.swift)
 - [Email](HonourTests/Library/Rules/EmailTest.swift)
 - [EndsWith](HonourTests/Library/Rules/EndsWithTest.swift)
+- [Even](HonourTests/Library/Rules/EvenTest.swift)
 - [HexRGBColor](HonourTests/Library/Rules/HexRGBColorTest.swift)
 - [Length](HonourTests/Library/Rules/LengthTest.swift)
 - [Lowercase](HonourTests/Library/Rules/LowercaseTest.swift)
@@ -151,8 +154,11 @@ Always a working in progress...
 - [Min](HonourTests/Library/Rules/MinTest.swift)
 - [Negative](HonourTests/Library/Rules/NegativeTest.swift)
 - [NoWhitespace](HonourTests/Library/Rules/NoWhitespaceTest.swift)
-- [Positive](HonourTests/Library/Rules/PositiveTest.swift)
+- [NoneOf](HonourTests/Library/Rules/NoneOfTest.swift)
 - [NotEmpty](HonourTests/Library/Rules/NotEmptyTest.swift)
+- [Odd](HonourTests/Library/Rules/OddTest.swift)
+- [OneOf](HonourTests/Library/Rules/OneOfTest.swift)
+- [Positive](HonourTests/Library/Rules/PositiveTest.swift)
 - [Regex](HonourTests/Library/Rules/RegexTest.swift)
 - [Roman](HonourTests/Library/Rules/RomanTest.swift)
 - [StartsWith](HonourTests/Library/Rules/StartsWithTest.swift)
