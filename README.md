@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/Honour.svg)](https://cocoapods.org/pods/Honour)
 [![Version](https://img.shields.io/cocoapods/v/Honour.svg)](https://cocoapods.org/pods/Honour)
 
-Validation library for iOS inspired by Respect/Validation.
+Validation library for iOS inspired by [Respect/Validation](https://github.com/respect/validation).
 
 ```swift
 Validator.mustBe(Uppercase()).andMust(StartsWith("F")).validate("FOOBAR")
