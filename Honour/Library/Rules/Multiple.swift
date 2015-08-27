@@ -27,7 +27,6 @@ public class Multiple : Rule {
             var multDouble = self.mult.doubleValue
             var vDouble = v.doubleValue
             
-            print("v = \(v) e self.mult = \(self.mult) \n\n")
             let result = (Int)(vDouble / multDouble)
             let resultTest = NSNumber(double: (Double(result) * multDouble))
             
