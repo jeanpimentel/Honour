@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85B033D41B8BDDD2002804C2 /* Multiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B033D31B8BDDD2002804C2 /* Multiple.swift */; };
+		85B033D61B8BFA11002804C2 /* MultipleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B033D51B8BFA11002804C2 /* MultipleTest.swift */; };
 		D92578591B713CAF00AF5882 /* Max.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92578581B713CAF00AF5882 /* Max.swift */; };
 		D925785B1B713D4900AF5882 /* MaxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925785A1B713D4900AF5882 /* MaxTest.swift */; };
 		D925785D1B71406500AF5882 /* BetweenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925785C1B71406500AF5882 /* BetweenTest.swift */; };
@@ -79,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85B033D31B8BDDD2002804C2 /* Multiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Multiple.swift; sourceTree = "<group>"; };
+		85B033D51B8BFA11002804C2 /* MultipleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTest.swift; sourceTree = "<group>"; };
 		D92578581B713CAF00AF5882 /* Max.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Max.swift; sourceTree = "<group>"; };
 		D925785A1B713D4900AF5882 /* MaxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxTest.swift; sourceTree = "<group>"; };
 		D925785C1B71406500AF5882 /* BetweenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetweenTest.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 		D98B8E331AF2817E00105460 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				85B033D31B8BDDD2002804C2 /* Multiple.swift */,
 				D92578721B72567900AF5882 /* Composite.swift */,
 				D92578741B7257D900AF5882 /* AllOf.swift */,
 				D98259651B0A791400417C2C /* AlwaysInvalid.swift */,
@@ -303,6 +308,7 @@
 		D98B8E391AF2827B00105460 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				85B033D51B8BFA11002804C2 /* MultipleTest.swift */,
 				D92578781B72854400AF5882 /* AllOfTest.swift */,
 				D98259691B0A799500417C2C /* AlwaysInvalidTest.swift */,
 				D982596A1B0A799500417C2C /* AlwaysValidTest.swift */,
@@ -460,6 +466,7 @@
 				D92578631B71444500AF5882 /* Negative.swift in Sources */,
 				D92578771B72845200AF5882 /* NoneOf.swift in Sources */,
 				D982595E1B0A643300417C2C /* Regex.swift in Sources */,
+				85B033D41B8BDDD2002804C2 /* Multiple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +483,7 @@
 				D981B99B1B6698C90020AE61 /* MinTest.swift in Sources */,
 				D95447FD1AF907F2002B4F33 /* ValidatorTest.swift in Sources */,
 				D98B8E3D1AF2830600105460 /* Rule.swift in Sources */,
+				85B033D61B8BFA11002804C2 /* MultipleTest.swift in Sources */,
 				D98B8E3B1AF282B700105460 /* LengthTest.swift in Sources */,
 				D982596B1B0A799500417C2C /* AlwaysInvalidTest.swift in Sources */,
 				D925786F1B7244BB00AF5882 /* OddTest.swift in Sources */,
