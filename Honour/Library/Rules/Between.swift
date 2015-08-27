@@ -13,34 +13,28 @@ public class Between : Rule {
     private var min : Min
     private var max : Max
 
-    public init(min: NSNumber, max: NSNumber) {
+    public init(min: AnyObject, max: AnyObject) {
         self.min = Min(min)
         self.max = Max(max)
     }
 
-    public init(_ min: NSNumber, _ max: NSNumber) {
+    public init(_ min: AnyObject, _ max: AnyObject) {
         self.min = Min(min)
         self.max = Max(max)
     }
 
-    public init(min: NSNumber, max: NSNumber, inclusive: Bool) {
+    public init(min: AnyObject, max: AnyObject, inclusive: Bool) {
         self.min = Min(min, inclusive: inclusive)
         self.max = Max(max, inclusive: inclusive)
     }
 
-    public init(_ min: NSNumber, _ max: NSNumber, inclusive: Bool) {
+    public init(_ min: AnyObject, _ max: AnyObject, inclusive: Bool) {
         self.min = Min(min, inclusive: inclusive)
         self.max = Max(max, inclusive: inclusive)
     }
-
 
     public override func validate(value: AnyObject) -> Bool {
-
-        if let v = value as? NSNumber {
-            return self.min.validate(v) && self.max.validate(v)
-        }
-
-        return false
+        return self.min.validate(value) && self.max.validate(value)
     }
 
 }

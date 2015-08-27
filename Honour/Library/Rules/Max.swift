@@ -10,23 +10,23 @@ import Foundation
 
 public class Max : Rule {
 
-    private var max: NSNumber
+    private var max: AnyObject
     private var inclusive: Bool = true
 
-    public init(max: NSNumber) {
+    public init(max: AnyObject) {
         self.max = max;
     }
 
-    public init(_ max: NSNumber) {
+    public init(_ max: AnyObject) {
         self.max = max;
     }
 
-    public init(max: NSNumber, inclusive: Bool) {
+    public init(max: AnyObject, inclusive: Bool) {
         self.max = max;
         self.inclusive = inclusive;
     }
 
-    public init(_ max: NSNumber, inclusive: Bool) {
+    public init(_ max: AnyObject, inclusive: Bool) {
         self.max = max;
         self.inclusive = inclusive;
     }
@@ -34,18 +34,36 @@ public class Max : Rule {
 
     public override func validate(value: AnyObject) -> Bool {
 
-        if let v = value as? NSNumber {
+        if let max = self.max as? NSNumber {
+            if let v = value as? NSNumber {
 
-            let result = self.max.compare(v)
+                let result = self.max.compare(v)
 
-            // <=
-            if self.inclusive {
-                return result == NSComparisonResult.OrderedSame || result == NSComparisonResult.OrderedDescending
+                // <=
+                if self.inclusive {
+                    return result == NSComparisonResult.OrderedSame || result == NSComparisonResult.OrderedDescending
+                }
+
+                // <
+                return result == NSComparisonResult.OrderedDescending
             }
-
-            // <
-            return result == NSComparisonResult.OrderedDescending
         }
+        
+        if let max = self.max as? NSDate {
+            if let v = value as? NSDate {
+                
+                let result = self.max.compare(v)
+                
+                // <=
+                if self.inclusive {
+                    return result == NSComparisonResult.OrderedSame || result == NSComparisonResult.OrderedDescending
+                }
+                
+                // <
+                return result == NSComparisonResult.OrderedDescending
+            }
+        }
+
 
         return false
     }
