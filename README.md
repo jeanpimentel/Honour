@@ -103,7 +103,7 @@ result.invalidRule // StartsWith("J")
 
 # Installation
 
-Package is available on [Cocoapods](https://cocoapods.org/pods/Honour). See the ["Using CocoaPods" guide for more information](https://guides.cocoapods.org/using/using-cocoapods.html).
+Package is available on [CocoaPods](https://cocoapods.org/pods/Honour). See the ["Using CocoaPods" guide for more information](https://guides.cocoapods.org/using/using-cocoapods.html).
 
 ```ruby
 use_frameworks!
