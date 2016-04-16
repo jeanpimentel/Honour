@@ -14,9 +14,9 @@ public class NoneOf : Composite {
         super.init()
         for rule in rules {
             if let noneOf = rule as? NoneOf {
-                self.addRules(noneOf.getRules())
+                self.add(rules: noneOf.getRules())
             } else {
-                self.addRule(rule)
+                self.add(rule: rule)
             }
         }
     }
@@ -25,7 +25,7 @@ public class NoneOf : Composite {
         super.init()
     }
 
-    public override func addRule(rule: Rule) -> NoneOf {
+    public override func add(rule rule: Rule) -> NoneOf {
         self.rules.append(rule)
         return self
     }

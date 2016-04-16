@@ -14,57 +14,57 @@ public class Validator : AllOf {
         super.init()
         for rule in rules {
             if let allOf = rule as? AllOf {
-                self.addRules(allOf.getRules())
+                self.add(rules: allOf.getRules())
             } else {
-                self.addRule(rule)
+                self.add(rule: rule)
             }
         }
     }
 
-    public override func addRule(rule: Rule) -> Validator {
+    public override func add(rule rule: Rule) -> Validator {
         self.rules.append(rule)
         return self
     }
     
     // MARK: - Some Sugar
     public func mustBe(rule: Rule) -> Validator {
-        return self.addRule(rule)
+        return self.add(rule: rule)
     }
 
     public func mustHave(rule: Rule) -> Validator {
-        return self.addRule(rule)
+        return self.add(rule: rule)
     }
 
     public func and(rule: Rule) -> Validator {
-        return self.addRule(rule)
+        return self.add(rule: rule)
     }
 
     public func andMust(rule: Rule) -> Validator {
-        return self.addRule(rule)
+        return self.add(rule: rule)
     }
 
     public func andMustBe(rule: Rule) -> Validator {
-        return self.addRule(rule)
+        return self.add(rule: rule)
     }
 
     public func andMustHave(rule: Rule) -> Validator {
-        return self.addRule(rule)
+        return self.add(rule: rule)
     }
 
-    class public func addRule(rule: Rule) -> Validator {
-        return Validator().addRule(rule)
+    class public func add(rule rule: Rule) -> Validator {
+        return Validator().add(rule: rule)
     }
 
     class public func must(rule: Rule) -> Validator {
-        return Validator().addRule(rule)
+        return Validator().add(rule: rule)
     }
 
     class public func mustBe(rule: Rule) -> Validator {
-        return Validator().addRule(rule)
+        return Validator().add(rule: rule)
     }
 
     class public func mustHave(rule: Rule) -> Validator {
-        return Validator().addRule(rule)
+        return Validator().add(rule: rule)
     }
 
 

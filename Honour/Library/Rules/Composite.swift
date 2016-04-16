@@ -10,25 +10,25 @@ import Foundation
 
 public class Composite : Rule {
 
-    internal var rules: Array<Rule>
+    internal var rules: [Rule]
 
     internal override init() {
         self.rules = []
     }
 
-    public func addRule(rule: Rule) -> Composite {
+    public func add(rule rule: Rule) -> Composite {
         self.rules.append(rule)
         return self
     }
 
-    public func addRules(rules: Array<Rule>) -> Composite {
+    public func add(rules rules: [Rule]) -> Composite {
         for rule in rules {
             self.rules.append(rule)
         }
         return self
     }
 
-    public func getRules() -> Array<Rule> {
+    public func getRules() -> [Rule] {
         return self.rules
     }
 

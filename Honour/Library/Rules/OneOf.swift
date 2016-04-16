@@ -14,9 +14,9 @@ public class OneOf : Composite {
         super.init()
         for rule in rules {
             if let oneOf = rule as? OneOf {
-                self.addRules(oneOf.getRules())
+                self.add(rules: oneOf.getRules())
             } else {
-                self.addRule(rule)
+                self.add(rule: rule)
             }
         }
     }
@@ -25,7 +25,7 @@ public class OneOf : Composite {
         super.init()
     }
 
-    public override func addRule(rule: Rule) -> OneOf {
+    public override func add(rule rule: Rule) -> OneOf {
         self.rules.append(rule)
         return self
     }
