@@ -150,6 +150,7 @@ Always a working in progress...
 - [Lowercase](HonourTests/Library/Rules/LowercaseTest.swift)
 - [Max](HonourTests/Library/Rules/MaxTest.swift)
 - [Min](HonourTests/Library/Rules/MinTest.swift)
+- [Multiple](HonourTests/Library/Rules/MultipleTest.swift)
 - [Negative](HonourTests/Library/Rules/NegativeTest.swift)
 - [NoWhitespace](HonourTests/Library/Rules/NoWhitespaceTest.swift)
 - [NoneOf](HonourTests/Library/Rules/NoneOfTest.swift)
