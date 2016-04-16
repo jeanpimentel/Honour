@@ -36,7 +36,7 @@ public class EndsWith : Rule {
 
         if let v = value as? String {
 
-            if count(self.endValue) == 0 {
+            if self.endValue.characters.count == 0 {
                 return true
             }
 

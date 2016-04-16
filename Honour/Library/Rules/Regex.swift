@@ -35,10 +35,10 @@ public class Regex: Rule {
 
         if let v = value as? String {
 
-            let range = NSMakeRange(0, count(v))
+            let range = NSMakeRange(0, v.characters.count)
 
-            if let r = NSRegularExpression(pattern: self.regex, options: ((self.caseInsensitive) ? .CaseInsensitive : .allZeros), error: nil) {
-                return r.rangeOfFirstMatchInString(v, options: .allZeros, range: range).location != NSNotFound
+            if let r = try? NSRegularExpression(pattern: self.regex, options: ((self.caseInsensitive) ? .CaseInsensitive : [])) {
+                return r.rangeOfFirstMatchInString(v, options: [], range: range).location != NSNotFound
             }
             
             return false

@@ -24,13 +24,13 @@ public class BR_CPF : Rule {
 
         if let v = value as? String {
 
-            let numbers = filter(v, {contains("0123456789", $0)})
+            let numbers = v.characters.filter({"0123456789".characters.contains($0)})
             if numbers.count != 11 {
                 return false
             }
 
 
-            if self.strict && count(v) != 11 {
+            if self.strict && v.characters.count != 11 {
                 return false
             }
 
@@ -49,18 +49,18 @@ public class BR_CPF : Rule {
             var s, n, i : Int
 
             // First digit
-            for s = 10, n = 0, i = 0; s >= 2; n += String(numbers[i++]).toInt()! * s-- {}
+            for s = 10, n = 0, i = 0; s >= 2; n += Int(String(numbers[i++]))! * s-- {}
             n %= 11
 
-            if String(numbers[9]).toInt()! != (n < 2 ? 0 : 11 - n) {
+            if Int(String(numbers[9]))! != (n < 2 ? 0 : 11 - n) {
                 return false
             }
 
             // Second digit
-            for s = 11, n = 0, i = 0; s >= 2; n += String(numbers[i++]).toInt()! * s-- {}
+            for s = 11, n = 0, i = 0; s >= 2; n += Int(String(numbers[i++]))! * s-- {}
             n %= 11
             
-            if String(numbers[10]).toInt()! != (n < 2 ? 0 : 11 - n) {
+            if Int(String(numbers[10]))! != (n < 2 ? 0 : 11 - n) {
                 return false
             }
             

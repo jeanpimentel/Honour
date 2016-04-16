@@ -15,9 +15,9 @@ public class NotEmpty : Rule {
         if let v = value as? String {
 
             let invalidSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-            var trimmed = v.stringByTrimmingCharactersInSet(invalidSet)
+            let trimmed = v.stringByTrimmingCharactersInSet(invalidSet)
 
-            return count(trimmed) != 0
+            return trimmed.characters.count != 0
         }
 
         return false

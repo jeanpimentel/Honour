@@ -20,8 +20,8 @@ class RuleTest: XCTestCase {
         let u2 = u1
         XCTAssertTrue(u1 == u2)
 
-        var u3 = Uppercase()
-        var u4 = u3
+        let u3 = Uppercase()
+        let u4 = u3
         XCTAssertTrue(u3 == u4)
     }
 

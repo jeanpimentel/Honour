@@ -35,7 +35,7 @@ public class Contains : Rule {
 
         if let v = value as? String {
 
-            if count(self.value) == 0 {
+            if self.value.characters.count == 0 {
                 return true
             }
 

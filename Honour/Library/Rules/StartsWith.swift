@@ -35,7 +35,7 @@ public class StartsWith : Rule {
 
         if let v = value as? String {
 
-            if count(self.startValue) == 0 {
+            if self.startValue.characters.count == 0 {
                 return true
             }
 

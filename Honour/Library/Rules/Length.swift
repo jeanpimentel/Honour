@@ -44,13 +44,13 @@ public class Length : Rule {
         if self.min == nil {
             return true
         }
-        return count(value) >= self.min
+        return value.characters.count >= self.min
     }
 
     func validateMax(value: String) -> Bool {
         if self.max == nil {
             return true
         }
-        return count(value) <= self.max
+        return value.characters.count <= self.max
     }
 }

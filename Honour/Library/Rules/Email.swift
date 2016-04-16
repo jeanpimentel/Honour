@@ -14,15 +14,13 @@ public class Email : Rule {
 
         if let v = value as? String {
 
-            if count(v) == 0 {
+            if v.characters.count == 0 {
                 return false
             }
 
-            var range = NSMakeRange(0, count(v))
+            let range = NSMakeRange(0, v.characters.count)
 
-            var error: NSError?
-            var detector: NSDataDetector = NSDataDetector(types: NSTextCheckingType.Link.rawValue, error: &error)!
-            if error != nil {
+            guard let detector: NSDataDetector = try? NSDataDetector(types: NSTextCheckingType.Link.rawValue) else {
                 return false
             }
 

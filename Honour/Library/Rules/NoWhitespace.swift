@@ -14,12 +14,12 @@ public class NoWhitespace : Rule {
 
         if let v = value as? String {
 
-            if count(v) == 0 {
+            if v.characters.count == 0 {
                 return true
             }
 
             let invalidSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-            if let range = v.rangeOfCharacterFromSet(invalidSet) {
+            if v.rangeOfCharacterFromSet(invalidSet) != nil {
                 return false
             }
             
