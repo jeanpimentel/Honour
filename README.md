@@ -10,8 +10,6 @@ Validation library for iOS inspired by [Respect/Validation](https://github.com/r
 Validator.mustBe(Uppercase()).andMust(StartsWith("F")).validate("FOOBAR")
 ```
 
-:exclamation: If you want to use this library in Objective-C classes, check [HonourBridge](https://github.com/jeanpimentel/HonourBridge) repo.
-
 # Usage
 
 ## Single Validation
@@ -26,7 +24,7 @@ Lowercase().validate(username) // true
 It is possible to use validators in a chain. 
 
 ```swift
-let v = Validator.addRule(Lowercase()).addRule(NoWhitespace()).addRule(Length(min: 3, max: 60))
+let v = Validator.add(rule: Lowercase()).add(rule: NoWhitespace()).add(rule: Length(min: 3, max: 60))
 v.validate("jeanpimentel") // true
 ```
 
@@ -53,7 +51,7 @@ func validate(value: AnyObject) -> Bool
 ```
 
 ```swift
-let validator = Validator().addRule(Uppercase()).addRule(StartsWith("J"))
+let validator = Validator().add(rule: Uppercase()).add(rule: StartsWith("J"))
 validator.validate("JEAN") // true
 validator.validate("PIMENTEL") // false
 ```
@@ -64,7 +62,7 @@ func assert(value: AnyObject) -> (isValid: Bool, invalidRules: Array<Rule>)
 ```
 
 ```swift
-let validator = Validator().addRule(Uppercase()).addRule(StartsWith("J"))
+let validator = Validator().add(rule: Uppercase()).add(rule: StartsWith("J"))
 
 let result = validator.assert("JEAN")
 result.isValid      // true
@@ -85,7 +83,7 @@ func check(value: AnyObject) -> (isValid: Bool, invalidRule: Rule?)
 ```
 
 ```swift
-let validator = Validator().addRule(Uppercase()).addRule(StartsWith("J"))
+let validator = Validator().add(rule: Uppercase()).add(rule: StartsWith("J"))
 
 let result = validator.check("JEAN")
 result.isValid     // true
