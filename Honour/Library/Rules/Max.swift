@@ -37,7 +37,7 @@ public class Max : Rule {
         if let max = self.max as? NSNumber {
             if let v = value as? NSNumber {
 
-                let result = self.max.compare(v)
+                let result = max.compare(v)
 
                 // <=
                 if self.inclusive {
@@ -52,7 +52,7 @@ public class Max : Rule {
         if let max = self.max as? NSDate {
             if let v = value as? NSDate {
                 
-                let result = self.max.compare(v)
+                let result = max.compare(v)
                 
                 // <=
                 if self.inclusive {

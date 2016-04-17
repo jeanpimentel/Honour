@@ -22,52 +22,62 @@ public class BR_CPF : Rule {
 
     public override func validate(value: AnyObject) -> Bool {
 
-        if let v = value as? String {
-
-            let numbers = v.characters.filter({"0123456789".characters.contains($0)})
-            if numbers.count != 11 {
-                return false
+        guard let input = value as? String else {
+            return false
+        }
+        
+        if self.strict && input.characters.count != 11 {
+            return false
+        }
+        
+        
+        let numbers = input.characters.filter({"0123456789".characters.contains($0)})
+        if numbers.count != 11 {
+            return false
+        }
+        
+        var allEquals = true
+        for number in numbers {
+            if number != numbers[0] {
+                allEquals = false
             }
-
-
-            if self.strict && v.characters.count != 11 {
-                return false
-            }
-
-
-            var allEquals = true
-            for char in numbers {
-                if char != numbers[0] {
-                    allEquals = false
-                }
-            }
-            if allEquals {
-                return false
-            }
-
-
-            var s, n, i : Int
-
-            // First digit
-            for s = 10, n = 0, i = 0; s >= 2; n += Int(String(numbers[i++]))! * s-- {}
-            n %= 11
-
-            if Int(String(numbers[9]))! != (n < 2 ? 0 : 11 - n) {
-                return false
-            }
-
-            // Second digit
-            for s = 11, n = 0, i = 0; s >= 2; n += Int(String(numbers[i++]))! * s-- {}
-            n %= 11
-            
-            if Int(String(numbers[10]))! != (n < 2 ? 0 : 11 - n) {
-                return false
-            }
-            
-            return true
-
+        }
+        if allEquals {
+            return false
         }
 
-        return false
+        
+        // First digit
+        var digit = 9
+        var sum = 0
+        for i in 0..<digit {
+            guard let n = Int(String(numbers[i])) else {
+                return false
+            }
+            sum += n * ((digit + 1) - i)
+        }
+        
+        if let firstDigit = Int(String(numbers[digit])) where firstDigit != ((10 * sum) % 11) % 10 {
+            return false
+        }
+        
+        
+        // Second digit
+        digit = 10
+        sum = 0
+        for i in 0..<digit {
+            guard let n = Int(String(numbers[i])) else {
+                return false
+            }
+            sum += n * ((digit + 1) - i)
+        }
+        
+        if let secondDigit = Int(String(numbers[digit])) where secondDigit != ((10 * sum) % 11) % 10 {
+            return false
+        }
+        
+        
+        return true
     }
+    
 }

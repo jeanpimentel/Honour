@@ -22,40 +22,53 @@ public class BR_CNPJ : Rule {
     
     public override func validate(value: AnyObject) -> Bool {
         
-        if let v = value as? String {
-            
-            let numbers = v.characters.filter({"0123456789".characters.contains($0)})
-            if numbers.count != 14 {
-                return false
-            }
-            
-            
-            if self.strict && v.characters.count != 14 {
-                return false
-            }
-            
-            
-            var n, i : Int
-            let b = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
-            
-            for n = 0, i = 0; i < 12; n += Int(String(numbers[i]))! * b[++i] {}
-            n %= 11
-            
-            if Int(String(numbers[12]))! != (n < 2 ? 0 : 11 - n) {
-                return false
-            }
-            
-            for n = 0, i = 0; i < 12; n += Int(String(numbers[i]))! * b[i++] {}
-            n %= 11
-            
-            if Int(String(numbers[13]))! != (n < 2 ? 0 : 11 - n) {
-                return false
-            }
-            
-            return true
-            
+        guard let input = value as? String else {
+            return false
         }
         
-        return false
+        if self.strict && input.characters.count != 14 {
+            return false
+        }
+
+        
+        let numbers = input.characters.filter({"0123456789".characters.contains($0)})
+        if numbers.count != 14 {
+            return false
+        }
+        
+            
+        let weight = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+        
+        
+        // First digit
+        var sum = 0
+        for i in 0...11 {
+            guard let n = Int(String(numbers[i])) else {
+                return false
+            }
+            
+            sum += n * weight[i + 1]
+        }
+        
+        if let firstDigit = Int(String(numbers[12])) where firstDigit != ((10 * sum) % 11) % 10 {
+            return false
+        }
+        
+        
+        // Second digit
+        sum = 0
+        for i in 0...12 {
+            guard let n = Int(String(numbers[i])) else {
+                return false
+            }
+            
+            sum += n * weight[i]
+        }
+        
+        if let secondDigit = Int(String(numbers[13])) where secondDigit != ((10 * sum) % 11) % 10 {
+            return false
+        }
+        
+        return true
     }
 }

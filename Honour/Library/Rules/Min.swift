@@ -37,7 +37,7 @@ public class Min : Rule {
         if let min = self.min as? NSNumber {
             if let v = value as? NSNumber {
 
-                let result = self.min.compare(v)
+                let result = min.compare(v)
 
                 // >=
                 if self.inclusive {
@@ -52,7 +52,7 @@ public class Min : Rule {
         if let min = self.min as? NSDate {
             if let v = value as? NSDate {
                 
-                let result = self.min.compare(v)
+                let result = min.compare(v)
                 
                 // >=
                 if self.inclusive {
