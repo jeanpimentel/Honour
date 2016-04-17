@@ -10,6 +10,8 @@
 		7B0FBC461B8E800500AA51DA /* CNPJTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FBC451B8E800500AA51DA /* CNPJTest.swift */; };
 		7B5201561CC3272A00E26862 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5201551CC3272A00E26862 /* CharacterSet.swift */; };
 		7B5201581CC3284E00E26862 /* CharacterSetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5201571CC3284E00E26862 /* CharacterSetTest.swift */; };
+		7B52015A1CC32C6E00E26862 /* ASCII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5201591CC32C6E00E26862 /* ASCII.swift */; };
+		7B52015C1CC331B800E26862 /* ASCIITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B52015B1CC331B800E26862 /* ASCIITest.swift */; };
 		7B7584161B8E50CC009D22F0 /* CNPJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7584151B8E50CC009D22F0 /* CNPJ.swift */; };
 		85B033D41B8BDDD2002804C2 /* Multiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B033D31B8BDDD2002804C2 /* Multiple.swift */; };
 		85B033D61B8BFA11002804C2 /* MultipleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B033D51B8BFA11002804C2 /* MultipleTest.swift */; };
@@ -88,6 +90,8 @@
 		7B0FBC451B8E800500AA51DA /* CNPJTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNPJTest.swift; sourceTree = "<group>"; };
 		7B5201551CC3272A00E26862 /* CharacterSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
 		7B5201571CC3284E00E26862 /* CharacterSetTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSetTest.swift; sourceTree = "<group>"; };
+		7B5201591CC32C6E00E26862 /* ASCII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCII.swift; sourceTree = "<group>"; };
+		7B52015B1CC331B800E26862 /* ASCIITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCIITest.swift; sourceTree = "<group>"; };
 		7B7584151B8E50CC009D22F0 /* CNPJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNPJ.swift; sourceTree = "<group>"; };
 		85B033D31B8BDDD2002804C2 /* Multiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Multiple.swift; sourceTree = "<group>"; };
 		85B033D51B8BFA11002804C2 /* MultipleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTest.swift; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 				D92578741B7257D900AF5882 /* AllOf.swift */,
 				D98259651B0A791400417C2C /* AlwaysInvalid.swift */,
 				D98259661B0A791400417C2C /* AlwaysValid.swift */,
+				7B5201591CC32C6E00E26862 /* ASCII.swift */,
 				D925785E1B71407300AF5882 /* Between.swift */,
 				7B5201551CC3272A00E26862 /* CharacterSet.swift */,
 				D98B8E4E1AF2C3BD00105460 /* Contains.swift */,
@@ -322,6 +327,7 @@
 				D92578781B72854400AF5882 /* AllOfTest.swift */,
 				D98259691B0A799500417C2C /* AlwaysInvalidTest.swift */,
 				D982596A1B0A799500417C2C /* AlwaysValidTest.swift */,
+				7B52015B1CC331B800E26862 /* ASCIITest.swift */,
 				D925785C1B71406500AF5882 /* BetweenTest.swift */,
 				7B5201571CC3284E00E26862 /* CharacterSetTest.swift */,
 				D98B8E501AF2C3C600105460 /* ContainsTest.swift */,
@@ -481,6 +487,7 @@
 				D92578631B71444500AF5882 /* Negative.swift in Sources */,
 				D92578771B72845200AF5882 /* NoneOf.swift in Sources */,
 				D982595E1B0A643300417C2C /* Regex.swift in Sources */,
+				7B52015A1CC32C6E00E26862 /* ASCII.swift in Sources */,
 				85B033D41B8BDDD2002804C2 /* Multiple.swift in Sources */,
 				7B5201561CC3272A00E26862 /* CharacterSet.swift in Sources */,
 			);
@@ -504,6 +511,7 @@
 				85B033D61B8BFA11002804C2 /* MultipleTest.swift in Sources */,
 				D98B8E3B1AF282B700105460 /* LengthTest.swift in Sources */,
 				D982596B1B0A799500417C2C /* AlwaysInvalidTest.swift in Sources */,
+				7B52015C1CC331B800E26862 /* ASCIITest.swift in Sources */,
 				D925786F1B7244BB00AF5882 /* OddTest.swift in Sources */,
 				D92578651B7146A200AF5882 /* PositiveTest.swift in Sources */,
 				D92578691B7240BF00AF5882 /* EvenTest.swift in Sources */,
